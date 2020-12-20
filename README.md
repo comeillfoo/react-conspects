@@ -108,22 +108,22 @@ React создает свой виртуальный DOM и обрабатыва
 
 + Передача входных параметров (props, только read-only)
 
-	const RootElement = () => {
-		return <NameOfElement propertyName="propertyValue" />
-	}
-	
-	const NameOfElement = (props) => {
-		return <div>{ props.propertyName }</div>
-	}
+		const RootElement = () => {
+			return <NameOfElement propertyName="propertyValue" />
+		}
+		
+		const NameOfElement = (props) => {
+			return <div>{ props.propertyName }</div>
+		}
 
 + Изменение состояния компонента (import {useState} from 'react')
 	
-	let initialValue = 1;
-	const NameOfElement = () => {
-		const [property, setProperty] = useState(initialValue);
-		setProperty(initialValue + 1);
-		return <div>property</div>
-	}
+		let initialValue = 1;
+		const NameOfElement = () => {
+			const [property, setProperty] = useState(initialValue);
+			setProperty(initialValue + 1);
+			return <div>property</div>
+		}
 
 ### Работа с событиями
 
@@ -166,17 +166,17 @@ React создает свой виртуальный DOM и обрабатыва
 
 1. __инициализация__ — создание экземпляра класса компонента
 	
-	setup props and state
+		setup props and state
 2. __монтирование__ — компонент вставляется в DOM
 
-	componentWillMount -> render -> componentDidMount
+		componentWillMount -> render -> componentDidMount
 3. __обновление__ — компонент обновляется новыми данными через состояние или свойства
 
-	props: componentWillReceiveProps -> shouldComponentUpdate (true->) componentWillUpdate -> render -> componentDidUpdate
-	states: shouldComponentUpdate (true->) componentWillUpdate -> render -> componentDidUpdate
+		props: componentWillReceiveProps -> shouldComponentUpdate (true->) componentWillUpdate -> render -> componentDidUpdate
+		states: shouldComponentUpdate (true->) componentWillUpdate -> render -> componentDidUpdate
 4. __размонтирование__ — компонент удаляется из DOM
 
-	componentWillUnmount
+		componentWillUnmount
 
 ## React-router
 
